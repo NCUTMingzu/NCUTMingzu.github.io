@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/popper.js"></script>
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="../css/blog.css" />
+<link rel="stylesheet" type="text/css" href="../css/custom.css" />
+<style>    
+    #intern{
+        background-color: rgba(176, 248, 245, 0.5);
+    }
+    th{
+        text-align: center;
+    }
+    th,td{
+        border: 1px solid black;
+        padding: 1px 5px;
+        vertical-align: center;
+    }    
+</style>
+</head>
+
+<body>    
+        <div id="title">
+            <h1>{{h1}}</h1>
+            <h2>{{h2}}</h2>
+        </title>
+        <div class="container">      
+        <div class="nav-scroller py-1 mb-2" style="border-bottom: 1px solid black;">
+            <nav class="nav d-flex justify-content-between">
+                <a class="p-2 text-muted" id="index" href="index.html">首頁</a>
+                <a class="p-2 text-muted" id="plan" href="plan.html">計畫內容</a>
+                <a class="p-2 text-muted" id="cooperate" href="cooperate.html">合作企業</a>
+                <a class="p-2 text-muted" id="info" href="info.html">課程資訊</a>
+                <a class="p-2 text-muted" id="intern" href="intern.html">校外實習媒合</a>
+                <a class="p-2 text-muted" id="contact" href="contact.html">聯繫我們</a>
+            </nav>
+        </div>
+      
+   
+      
+      <main role="main" class="container">
+        <div class="row">
+            <!--內文-->
+            <h1>校外實習媒合</h1>     
+            <div class="blog-post"> 
+                <h2>企業實習規劃:</h2>               
+                <table>
+                    <th>實習廠商</th>
+                    <th>實習時間</th>
+                    <th>實習/專題製作內容</th>
+                    <th>實習學分</th>
+                    <th>實習人數</th>
+                    <th>實習時數</th>
+                    <tr>
+                        <td>永鉅精密科技股份有限公司</td>
+                        <td>寒/暑假(108年7月-109年6月)</td>
+                        <td>分為兩大主軸:
+                            <ol>
+                                <li>3D建模</li>
+                                <li>板金造型設計</li>
+                            </ol>
+                        </td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>320</td>
+                    </tr>
+                    <tr>
+                        <td>高明鐵企業股份有限公司中科分公司</td>
+                        <td>寒/暑假(108年7月-109年6月)</td>
+                        <td>三軸龍門平台設計組裝與控制</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>320</td>
+                    </tr>
+                    <tr>
+                        <td>鋐光實業股份有限公司</td>
+                        <td>寒/暑假(108年7月-109年6月)</td>
+                        <td>精密機械與機構設計組裝與控制</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>320</td>
+                    </tr>
+
+                </table>
+            </div>
+        <!-- /.blog-post -->
+        </div><!-- /.row -->
+        </main><!-- /.container -->
+    </div>
+</body>
+      
+<!--頁尾-->
+<footer class="blog-footer">
+    <footbox></footbox>
+    <div id="copyright">
+        <copyright></copyright>
+    </div>
+</footer>
+
+<script type="text/javascript" src="../js/vue.js"></script>
+<script type="text/javascript" src="../js/view/title.js"></script>
+<script type="text/javascript" src="../js/view/myfootbox.js"></script>
+<script type="text/javascript" src="../js/view/copyright.js"></script>
+<script>
+    title.$mount("#title");
+    var vm = new Vue({
+    el: '#copyright'
+    });
+    var vm2 = new Vue({
+        el: '.blog-footer'
+    });
+</script>
